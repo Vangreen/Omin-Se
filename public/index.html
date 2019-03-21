@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008000"/>
+  <title>Omin-se</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      background-color: #FF9800;
+      color: black;
+    }
+    .vertical-container {
+      height: 300px;
+      display: -webkit-flex;
+      display:         flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+    h1.vertical-container {
+      font-size: 275%;
+    }
+  </style>
+</head>
+<body>
+<h1 class="vertical-container">Omin.Se</h1>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDDnKvi7GudJeLxswkpq4jITPYwSeek-W8",
+    authDomain: "omin-se.firebaseapp.com",
+    databaseURL: "https://omin-se.firebaseio.com",
+    projectId: "omin-se",
+    storageBucket: "omin-se.appspot.com",
+    messagingSenderId: "98021140570"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+            .then(function() {
+              console.log('Service Worker Registered');
+            });
+  }
+</script>
+<script>
+  const messaging = firebase.messaging();
+  messaging.requestPermission()
+          .then(function() {
+            console.log('Notification permission granted.');
+            return messaging.getToken();
+          })
+          .then(function(token) {
+            console.log(token);
+          })
+          .catch(function(err) {
+            console.log('Unable to get permission to notify.', err);
+          })
+</script>
+</body>
+</html>
