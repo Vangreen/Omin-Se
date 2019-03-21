@@ -1,12 +1,12 @@
-importScripts('https://www.gstatic.com/firebasejs/4.4.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/4.4.0/firebase-messaging.js');
+importScripts('https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.5.6/firebase-messaging.js');
 var config = {
-    apiKey: "AIzaSyAXK4Orxl2CghIQvKiUPtkhEngSgzteqE0",
-    authDomain: "hello-world-pwa-8669c.firebaseapp.com",
-    databaseURL: "https://hello-world-pwa-8669c.firebaseio.com",
-    projectId: "hello-world-pwa-8669c",
-    storageBucket: "hello-world-pwa-8669c.appspot.com",
-    messagingSenderId: "660239288739"
+    apiKey: "AIzaSyDDnKvi7GudJeLxswkpq4jITPYwSeek-W8",
+    authDomain: "omin-se.firebaseapp.com",
+    databaseURL: "https://omin-se.firebaseio.com",
+    projectId: "omin-se",
+    storageBucket: "omin-se.appspot.com",
+    messagingSenderId: "98021140570"
 };
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
