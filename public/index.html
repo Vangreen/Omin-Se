@@ -103,53 +103,8 @@
 
 
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDDnKvi7GudJeLxswkpq4jITPYwSeek-W8",
-        authDomain: "omin-se.firebaseapp.com",
-        databaseURL: "https://omin-se.firebaseio.com",
-        projectId: "omin-se",
-        storageBucket: "omin-se.appspot.com",
-        messagingSenderId: "98021140570"
-    };
-    firebase.initializeApp(config);
-</script>
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function () {
-                console.log('Service Worker Registered');
-            });
-    }
-</script>
-<script>
-    var messagesRef = firebase.database().ref('messages');
-
-    //save messages
-    function saveMessages(token) {
-        var newMessageRef = messagesRef.push();
-        newMessageRef.set({
-            token:token
-        })
-
-    }
-
-    const messaging = firebase.messaging();
-    messaging.requestPermission()
-        .then(function () {
-            console.log('Notification permission granted.');
-            return messaging.getToken();
-            saveMessages(token);
-        })
-        .then(function (token) {
-            saveMessages(token);
-            console.log(token);
-        })
-        .catch(function (err) {
-            console.log('Unable to get permission to notify.', err);
-        })
-</script>
+<script src="token.js"></script>
+<script src="app.js"></script>
 
 <div id="map-container" class="z-depth-1-half map-container" style="height: 500px">
     <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"

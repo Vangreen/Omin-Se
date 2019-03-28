@@ -66,3 +66,4 @@ node_modules/
 
 #idea
 .idea
+/public/token.js
