@@ -17,6 +17,15 @@
     <title>Omin-se</title>
     <link rel="manifest" href="manifest.json">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,7 +36,6 @@
             background-color: #FF9800;
             color: black;
         }
-
         .vertical-container {
             height: 300px;
             display: -webkit-flex;
@@ -37,23 +45,18 @@
             -webkit-justify-content: center;
             justify-content: center;
         }
-
         h1.vertical-container {
             font-size: 275%;
         }
-
         body {
             -webkit-user-select: none;
         }
-
         body {
             -webkit-tap-highlight-color: transparent;
         }
-
         body {
             -webkit-touch-callout: none;
         }
-
         #map {
             height: 100%;
         }
@@ -116,14 +119,12 @@
     // failed.", it means you probably did not give permission for the browser to
     // locate you.
     var map, infoWindow;
-
     function initMap() {
         map = new google.maps.Map(document.getElementById('map-container'), {
             center: {lat: -34.397, lng: 150.644},
             zoom: 6
         });
         infoWindow = new google.maps.InfoWindow;
-
 // Try HTML5 geolocation.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -131,7 +132,6 @@
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
-
                 infoWindow.setPosition(pos);
                 infoWindow.setContent('Location found.');
                 infoWindow.open(map);
@@ -144,7 +144,6 @@
             handleLocationError(false, infoWindow, map.getCenter());
         }
     }
-
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -155,6 +154,14 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5pM0pXoFXI3MzhEEycH9AX-UadyGjzKY&callback=initMap"
         async defer></script>
-
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.js"></script>
 </body>
 </html>
