@@ -1,12 +1,11 @@
-var cacheName = '0.9';
+var cacheName = '18';
 
 
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
             .then(cache => cache.delete([
-                './index.html',
-                './app.js'
+                '/index.html'
             ]))
     );
 });
@@ -30,7 +29,6 @@ self.addEventListener('fetch', function (event) {
 });
 
 var filesToCache = [
-    '/',
     '/index.html',
 ];
 self.addEventListener('install', function(e) {
