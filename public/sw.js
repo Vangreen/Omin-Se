@@ -4,13 +4,8 @@ var cacheName = '0.9';
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
-            .self.caches.keys().then(keys => {
-            keys.forEach(key => console.log(key))
-            {
-                key=>self.caches.delete(key);
-            }
-
-        })
+            .self.caches.keys().then(keys =>
+            keys.forEach(key => console.log(key), key => self.caches.delete(key)))
     );
 });
 
