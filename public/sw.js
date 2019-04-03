@@ -1,4 +1,4 @@
-var CACHE_NAME = '1';
+var CACHE_NAME = '6';
 
 
 self.addEventListener('install', event => {
@@ -35,6 +35,7 @@ self.addEventListener('fetch', function (event) {
 
 var filesToCache = [
     '/index.html',
+    '/404.html'
 ];
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');

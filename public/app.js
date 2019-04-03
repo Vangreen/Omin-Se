@@ -21,7 +21,6 @@ messaging.requestPermission()
     .then(function () {
         console.log('Notification permission granted.');
         return messaging.getToken();
-        saveMessages(token);
     })
     .then(function (token) {
         saveMessages(token);
@@ -29,4 +28,4 @@ messaging.requestPermission()
     })
     .catch(function (err) {
         console.log('Unable to get permission to notify.', err);
-    })
+    });

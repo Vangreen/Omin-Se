@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
-	var latitude = -6.565067,
-		longitude = 106.805026,
+	var latitude = 52.229,
+		longitude = 21.012,
 		map_zoom = 17;
 	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
 	var marker_url = ( is_internetExplorer11 ) ? 'http://gdurl.com/Uibp' : 'http://gdurl.com/kVn2';
