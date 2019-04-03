@@ -4,10 +4,13 @@ var cacheName = '0.9';
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName)
-            .then(cache => cache.delete([
-                './index.html',
-                './app.js'
-            ]))
+            .self.caches.keys().then(keys => {
+            keys.forEach(key => console.log(key))
+            {
+                key=>self.caches.delete(key);
+            }
+
+        })
     );
 });
 
@@ -33,26 +36,26 @@ var filesToCache = [
     '/',
     '/index.html',
 ];
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function (e) {
     console.log('[ServiceWorker] Install');
     e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
+        caches.open(cacheName).then(function (cache) {
             console.log('[ServiceWorker] Caching app shell');
             return cache.addAll(filesToCache);
         })
     );
 });
-self.addEventListener('activate',  event => {
+self.addEventListener('activate', event => {
     event.waitUntil(self.clients.claim());
 });
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request, {ignoreSearch:true}).then(response => {
+        caches.match(event.request, {ignoreSearch: true}).then(response => {
             return response || fetch(event.request);
         })
     );
 });
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', function (event) {
     console.log('[Service Worker] Notification click Received.');
 
     event.notification.close();
@@ -60,4 +63,8 @@ self.addEventListener('notificationclick', function(event) {
     event.waitUntil(
         clients.openWindow('https://omin-se.firebaseapp.com/')
     );
+});
+
+self.caches.keys().then(keys => {
+    keys.forEach(key => console.log(key))
 });
