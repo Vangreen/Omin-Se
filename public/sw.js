@@ -1,12 +1,17 @@
-var cacheName = '18';
+var CACHE_NAME = '1';
 
 
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(cacheName)
-            .then(cache => cache.delete([
-                '/index.html'
-            ]))
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                cacheNames.map(function(cacheName) {
+                    if(cacheName != CACHE_NAME) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
     );
 });
 
@@ -34,7 +39,7 @@ var filesToCache = [
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
     e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
+        caches.open(CACHE_NAME).then(function(cache) {
             console.log('[ServiceWorker] Caching app shell');
             return cache.addAll(filesToCache);
         })
