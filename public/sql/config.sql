@@ -24,5 +24,5 @@ id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 fk_id_event INT NOT NULL ,
 fk_id_tag INT NOT NULL ,
 FOREIGN KEY (fk_id_event) REFERENCES events(id),
-FOREIGN KEY (fk_id_tag) REFERENCES evetag(id)
+FOREIGN KEY (fk_id_tag) REFERENCES tag(id)
 );
