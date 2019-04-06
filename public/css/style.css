@@ -62,7 +62,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .card-body {
+  .card-body.mobile-centered {
     text-align: center;
   }
 
