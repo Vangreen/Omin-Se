@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1E88E5" />
+  <!-- Apple manifest-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="img/ominse.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/ominse-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/ominse-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/ominse-152.png">
+  <link rel="apple-touch-startup-image" href="img/ominse.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="omin-se">
+  <title>Omin-se</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Custom styles -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/bottom-nav.min.css" rel="stylesheet">
+  <link href="css/stepper.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar fixed-bottom navbar-dark grey">
+    <!-- Map Nav -->
+    <a class="no-labels-nav__action" href="index.html">
+      <svg class="no-labels-nav__icon" viewBox="0 0 20 20">
+        <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"></path>
+      </svg>
+    </a>
+
+    <!-- Events Nav -->
+    <a class="no-labels-nav__action" href="events.html">
+      <svg class="no-labels-nav__icon" viewBox="0 0 20 20">
+        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"></path>
+      </svg>
+    </a>
+
+    <a class="no-labels-nav__action active" href="#">
+      <svg class="no-labels-nav__icon" viewBox="0 0 20 20">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+      </svg>
+    </a>
+
+
+    <a class="no-labels-nav__action" href="settings.html">
+      <svg class="no-labels-nav__icon" viewBox="0 0 20 20">
+        <path d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"></path>
+      </svg>
+    </a>
+  </nav>
+
+  <!-- Content -->
+  <main>
+    <section>
+      <div class="container-fluid">
+
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-6 col-6 mx-lg-4">
+            <div class="row pb-3">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body mx-4">
+
+                    <div class="row my-3">
+                      <div class="col-md-12 col-md">
+                        <h2 class="card-title"><i class="fas fa-plus-circle mr-2"></i> Dodaj zdarzenie</h2>
+                      </div>
+                    </div>
+
+                    <div class="row my-3">
+                      <div class="col-md-12 col-md">
+                        <ul class="stepper linear">
+                          <li class="step active">
+                            <div data-step-label="Wybierz kategorię zgłoszenia" class="step-title waves-effect waves-dark">Krok 1</div>
+                            <div class="step-new-content">
+                              <div class="row">
+                                <div class="md-form col-12 ml-auto">
+                                  <!-- Material radio -->
+                                  <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="1">
+                                    <label class="form-check-label" for="1">Metro</label>
+                                  </div>
+
+                                  <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="2">
+                                    <label class="form-check-label" for="2">Marsz</label>
+                                  </div>
+
+                                  <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="3">
+                                    <label class="form-check-label" for="3">Manifestacja</label>
+                                  </div>
+
+                                  <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="4">
+                                    <label class="form-check-label" for="4">Zagrożenie</label>
+                                  </div>
+
+                                  <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="5">
+                                    <label class="form-check-label" for="5">Blokada</label>
+                                  </div>
+                                  <!-- /MR -->
+                                </div>
+                              </div>
+                              <div class="step-actions">
+                                <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">KONTYNUUJ</button>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="step">
+                            <div data-step-label="Opisz zdarzenie" class="step-title waves-effect waves-dark">Krok 2</div>
+                            <div class="step-new-content">
+                              <div class="row">
+                                <div class="md-form col-12 ml-auto">
+                                  <input id="description-linear" type="text" class="form-control validate" required>
+                                  <label for="description-linear">Opis</label>
+                                </div>
+                              </div>
+                              <div class="step-actions">
+                                <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">KONTYNUUJ</button>
+                                <button class="waves-effect waves-dark btn btn-sm btn-secondary previous-step">WRÓĆ</button>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="step">
+                            <div data-step-label="Zabezpieczenie antybotowe" class="step-title waves-effect waves-dark">Krok 3</div>
+                            <div class="step-new-content">
+
+
+
+                              <div class="step-actions">
+                                <button class="waves-effect waves-dark btn btn-sm btn-primary m-0 mt-4" type="button">WYŚLIJ ZGŁOSZENIE</button>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <!-- Snackbar update -->
+  <div id="snackbar">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="token.js"></script>
+  <script src="app.js"></script>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+  <script src="js/mapa.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5pM0pXoFXI3MzhEEycH9AX-UadyGjzKY&callback=initMap" async defer></script>
+
+  <!-- Bootstrap tooltips -->
+  <script src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script src="js/mdb.js"></script>
+  <!-- Snackbar -->
+  <script src="js/snackbar.js"></script>
+  <!-- Stepper -->
+  <script src="js/stepper.min.js"></script>
+  <!-- Material Select -->
+  <script src="js/material-select.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.stepper').mdbStepper();
+    })
+  </script>
+
+</body>
+
+</html>
