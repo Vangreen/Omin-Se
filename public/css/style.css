@@ -79,3 +79,90 @@ html, body {
   margin-top: 10px;
   text-align: right;
 }
+
+/* **************************************** */
+/* MARGINS AND PADDINGS */
+/* **************************************** */
+
+@media (min-width: 768px) {
+
+  .pt-md-6,
+  .py-md-6 {
+    padding-top: 6rem !important;
+  }
+
+  .pr-md-6,
+  .px-md-6 {
+    padding-right: 6rem !important;
+  }
+
+  .pb-md-6,
+  .py-md-6 {
+    padding-bottom: 6rem !important;
+  }
+
+  .pl-md-6,
+  .px-md-6 {
+    padding-left: 6rem !important;
+  }
+
+  .mt-md-6,
+  .my-md-6 {
+    padding-top: 6rem !important;
+  }
+
+  .mr-md-6,
+  .mx-md-6 {
+    padding-right: 6rem !important;
+  }
+
+  .mb-md-6,
+  .my-md-6 {
+    padding-bottom: 6rem !important;
+  }
+
+  .ml-md-6,
+  .mx-md-6 {
+    padding-left: 6rem !important;
+  }
+}
+
+.pt-6,
+.py-6 {
+  padding-top: 6rem !important;
+}
+
+.pr-6,
+.px-6 {
+  padding-right: 6rem !important;
+}
+
+.pb-6,
+.py-6 {
+  padding-bottom: 6rem !important;
+}
+
+.pl-6,
+.px-6 {
+  padding-left: 6rem !important;
+}
+
+.mt-6,
+.my-6 {
+  padding-top: 6rem !important;
+}
+
+.mr-6,
+.mx-6 {
+  padding-right: 6rem !important;
+}
+
+.mb-6,
+.my-6 {
+  padding-bottom: 6rem !important;
+}
+
+.ml-6,
+.mx-6 {
+  padding-left: 6rem !important;
+}
