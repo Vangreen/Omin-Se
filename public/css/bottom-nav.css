@@ -6,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: hidden; /* TO CHANGE */
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -15,38 +15,6 @@ body {
   color: rgba(0, 0, 0, .87);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased
-}
-
-main {
-  max-width: 600px;
-  margin: 6em auto;
-  padding-left: 1em;
-  padding-right: 1em
-}
-
-.subtitle, h1, h2 {
-  margin: 2em 0 .3em -.07em;
-  font-weight: 400;
-  letter-spacing: .02em;
-  line-height: 1
-}
-
-h1 {
-  font-size: 3.5rem
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  line-height: 1.2
-}
-
-.subtitle, ol, p, ul {
-  margin-top: 0;
-  margin-bottom: 1.5rem
-}
-
-strong {
-  font-weight: 500
 }
 
 .bottom-nav {
@@ -154,16 +122,12 @@ strong {
   text-decoration: none
 }
 
-.no-labels-nav__action:not(:last-child) {
-  margin-right: 12px
+.no-labels-nav__action.active {
+  color: #1E88E5;
 }
 
-.no-labels-nav__action--active {
-  padding-top: 6px;
-  color: #1E88E5;
-  padding-bottom: 8px;
-  min-width: 56px;
-  max-width: 144px
+.no-labels-nav__action:not(:last-child) {
+  margin-right: 12px
 }
 
 .no-labels-nav__icon {
