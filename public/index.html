@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#008000" />
+  <meta name="theme-color" content="#1E88E5" />
   <!-- Apple manifest-->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" href="img/ominse.png">
@@ -36,7 +36,7 @@
 
 <body>
   <nav class="navbar fixed-bottom navbar-dark grey">
-    <a class="no-labels-nav__action" href="#">
+    <a class="no-labels-nav__action--active" href="#">
       <svg class="no-labels-nav__icon" viewBox="0 0 20 20">
         <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"></path>
       </svg>
@@ -82,47 +82,8 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script src="js/mdb.js"></script>
-
-  <script>
-    let newWorker;
-
-    function showUpdateBar() {
-      let snackbar = document.getElementById('snackbar');
-      snackbar.className = 'show';
-    }
-    // The click event on the pop up notification
-    document.getElementById('reload').addEventListener('click', function() {
-      newWorker.postMessage({
-        action: 'skipWaiting'
-      });
-    });
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then(reg => {
-        reg.addEventListener('updatefound', () => {
-          // A wild service worker has appeared in reg.installing!
-          newWorker = reg.installing;
-          newWorker.addEventListener('statechange', () => {
-            // Has network.state changed?
-            switch (newWorker.state) {
-              case 'installed':
-                if (navigator.serviceWorker.controller) {
-                  // new update available
-                  showUpdateBar();
-                }
-                // No update available
-                break;
-            }
-          });
-        });
-      });
-      let refreshing;
-      navigator.serviceWorker.addEventListener('controllerchange', function() {
-        if (refreshing) return;
-        window.location.reload();
-        refreshing = true;
-      });
-    }
-  </script>
+  <!-- Snackbar -->
+  <script src="js/snackbar.js"></script>
 
 
 </body>

@@ -87,7 +87,7 @@ strong {
 
 .bottom-nav__action--active {
   padding-top: 6px;
-  color: #f44336
+  color: #f44336;
 }
 
 .bottom-nav__icon {
@@ -160,7 +160,7 @@ strong {
 
 .no-labels-nav__action--active {
   padding-top: 6px;
-  color: #fff;
+  color: #1E88E5;
   padding-bottom: 8px;
   min-width: 56px;
   max-width: 144px
