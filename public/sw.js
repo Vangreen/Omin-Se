@@ -1,4 +1,4 @@
-var CACHE_NAME = '10';
+var CACHE_NAME = '14';
 
 
 self.addEventListener('install', event => {
