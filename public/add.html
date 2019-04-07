@@ -79,16 +79,16 @@
                       </div>
                     </div>
 
-                    <form action = "/php/new.php" method="post" target="_blank">
+                    <form action = "/php/new.php" method="post" target="_blank" novalidate="novalidate" class="needs-validation">
 
                     <div class="row my-3">
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <ul class="stepper linear">
                           <li class="step active">
                             <div data-step-label="Wybierz kategorię zgłoszenia" class="step-title waves-effect waves-dark">Krok 1</div>
                             <div class="step-new-content">
                               <div class="row">
-                                <div class="md-form col-12 ml-auto">
+                                <div class="md-form col-lg-3 col-md-8 col-8">
                                   <!-- Material radio -->
 
                                   <div class="form-check form-check-inline">
@@ -128,8 +128,8 @@
                             <div data-step-label="Opisz zdarzenie" class="step-title waves-effect waves-dark">Krok 2</div>
                             <div class="step-new-content">
                               <div class="row">
-                                <div class="md-form col-12 ml-auto">
-                                  <input id="description-linear" type="text" class="form-control validate" required>
+                                <div class="md-form col-md-12 ml-auto control-group">
+                                  <input id="description-linear" type="text" class="form-control validate" required="required" data-validation-required-message="Proszę podać opis zdarzenia.">
                                   <label for="description-linear">Opis</label>
                                 </div>
                               </div>
@@ -142,9 +142,9 @@
                           <li class="step">
                             <div data-step-label="Zabezpieczenie antybotowe" class="step-title waves-effect waves-dark">Krok 3</div>
 
-                            <div class="step-new-content">
+                            <div class="step-new-content ml-sm-0 ml-md-0 ml-lg-5 mt-3">
                               <div class="capt_style">
-                                <div class="g-recaptcha" data-theme="light" style="transform:scale(1);margin-left: 0" data-sitekey="6LeOrpwUAAAAAFxz9sjRWdD0GHmQPuPKIn_KXonF"></div>
+                                <div class="g-recaptcha" data-theme="light" style="transform:scale(1);" data-sitekey="6LeOrpwUAAAAAFxz9sjRWdD0GHmQPuPKIn_KXonF"></div>
                               </div>
 
 
@@ -201,7 +201,7 @@
   <!-- Stepper -->
   <script src="js/stepper.min.js"></script>
   <!-- Material Select -->
-  <script src="js/material-select.js"></script>
+  <script src="js/modules/material-select.js"></script>
   <script>
     $(document).ready(function() {
       $('.stepper').mdbStepper();
