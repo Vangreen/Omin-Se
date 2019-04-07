@@ -278,6 +278,18 @@
   <script src="js/mdb.js"></script>
   <!-- Snackbar -->
   <script src="js/snackbar.js"></script>
+
+  <script>
+    $(function() {
+      $('.vote-buttons .vote-icon').click(function() {
+        $(this).attr('src', "img/checked-vote.png");
+        $(this).css('transform', "rotate(0deg)");
+        $(this).parent().prev().css("display","none");
+        $(this).parent().next().css("display","none");
+        return false;
+      });
+    });
+  </script>
   <!-- /SCRIPTS -->
 </body>
 
