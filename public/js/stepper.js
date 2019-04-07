@@ -364,7 +364,7 @@
     },
 
     messages: {
-      required: "This field is required.",
+      required: "To pole jest wymagane.",
       remote: "Please fix this field.",
       email: "Please enter a valid email address.",
       url: "Please enter a valid URL.",
