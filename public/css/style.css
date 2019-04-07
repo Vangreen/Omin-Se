@@ -40,6 +40,10 @@ body {
   animation: fadein 0.5s;
 }
 
+#reload {
+  font-weight: bold;
+}
+
 @-webkit-keyframes fadein {
   from {
     bottom: 0;
