@@ -40,7 +40,7 @@ body {
   animation: fadein 0.5s;
 }
 
-#reload {
+#snackbar #reload {
   font-weight: bold;
 }
 
