@@ -84,8 +84,7 @@
     function onGeoError(event) {
       alert("Error code " + event.code + ". " + event.message);
       var x = document.getElementById("formSend");
-      x.style.opacity("0.5");
-      x.prop("disabled", true);
+      $("#formSend").attr("disabled", "disabled");
     }
 
     getLocationConstant();
