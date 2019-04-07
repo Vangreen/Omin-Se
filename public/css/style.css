@@ -84,6 +84,11 @@ body {
   text-align: right;
 }
 
+.md-form .form-check {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 /* **************************************** */
 /* MARGINS AND PADDINGS */
 /* **************************************** */
