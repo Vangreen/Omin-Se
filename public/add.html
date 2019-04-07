@@ -66,7 +66,10 @@
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
       } else {
-        alert("Your browser or device doesn't support Geolocation");
+        alert("Uruchom lokalizacje");
+        var x = document.getElementById("formSend");
+        x.style.display = "none";
+
       }
     }
 
@@ -80,6 +83,9 @@
     // If something has gone wrong with the geolocation request
     function onGeoError(event) {
       alert("Error code " + event.code + ". " + event.message);
+      var x = document.getElementById("formSend");
+      x.style.opacity("0.5");
+      x.disabled();
     }
 
     getLocationConstant();
